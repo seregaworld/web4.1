@@ -1,24 +1,47 @@
- $(document).ready(function(){
-                        $(".shopia-footer-content-up-shops-form-button_pop_up").click(function(){
-                            $('#myfond_gris').fadeIn(300);
-                            var iddiv = $(this).attr("iddiv");
-                            $('#'+iddiv).fadeIn(300);	
-                            $('#myfond_gris').attr('opendiv',iddiv);
+//Обатная связь + валидация
+function fadeOut(el){
+  el.style.opacity = 1;
 
-                            return false;
-                        });
+  (function fade() {
+    if ((el.style.opacity -= .1) < 0) {
+      el.style.display = "none";
+    } else {
+      requestAnimationFrame(fade);
+    }
+  })();
+}
 
-						
-                        $('#myfond_gris, .mymagicoverbox_fermer').click(function()
-                        {
-                            var iddiv = $("#myfond_gris").attr('opendiv');
-                            $('#myfond_gris').fadeOut(300);
-                            $('#'+iddiv).fadeOut(300);
-                        });
-                    });
+// fade in
 
- $(document).ready(function(){
-			$(".mymagicoverbox_pop").click(function(){
+function fadeIn(el, display){
+  el.style.opacity = 0;
+  el.style.display = display || "block";
+
+  (function fade() {
+    var val = parseFloat(el.style.opacity);
+    if (!((val += .1) > 1)) {
+      el.style.opacity = val;
+      requestAnimationFrame(fade);
+    }
+  })();
+}
+
+                       function myFunctionPop_() {
+                            fadeIn(document.getElementById('myfond_gris'));
+                            var iddiv = document.getElementById('shopia-footer-content-up-shops-form-button_pop_up').getAttribute("iddiv");
+                            fadeIn(document.getElementById(iddiv));	
+                            document.getElementById('myfond_gris').setAttribute('opendiv', iddiv);	
+                    
+                        };
+
+			function myFunctionPop1_() {
+			    var iddiv = document.getElementById('myfond_gris').getAttribute("opendiv"); 			
+			    fadeOut(document.getElementById('myfond_gris'));
+			    fadeOut(document.getElementById(iddiv));
+			   
+			}
+                       
+			function myFunctionPop2_() {
 				var valid = true;
 				var re = /^\w$/;
         			if (((document.getElementById("user_name").value.length < 3)||(document.getElementById("user_name").value.length > 20))&&(!re.test(document.getElementById("user_name").value)))	
@@ -56,9 +79,9 @@
 
 				if (valid)
 				{
-                            		var iddiv = $("#myfond_gris").attr('opendiv');
-                            		$('#myfond_gris').fadeOut(300);
-                            		$('#'+iddiv).fadeOut(300);
+                            		var iddiv = document.getElementById('myfond_gris').getAttribute('opendiv');
+                            		fadeOut(document.getElementById("myfond_gris"));
+                            		fadeOut(document.getElementById(iddiv));
 
 					document.getElementById("mail").value="";
 				 	document.getElementById("user_name").value="";	
@@ -68,5 +91,4 @@
 					document.getElementById("label_user").style.color="black";
 					document.getElementById("label_subject").style.color="black";
 				}	
- 			});
-               	});
+ 			}

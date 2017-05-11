@@ -9,12 +9,13 @@
     	<link rel="stylesheet" type="text/css" href="less/style.css">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />    <!-- Долой quirks mode -->
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /> <!-- Чтобы работали Media Queries запросы -->
+	    <script type="text/javascript" src="../app/js/vanilla.js"></script>
         <script type="text/javascript" src="../app/js/jquery-1.7.2.min.js"></script>
         <script src="../app/js/menu.js"></script>
         <script type='text/javascript' src='../app/js/queryLoader.js'></script>
         <script type='text/javascript' src='../app/js/slider.js'></script>
         <script type='text/javascript' src='../app/js/pop_up.js'></script>
-         <script type='text/javascript' src='../app/js/json.js'></script>
+        <script type='text/javascript' src='../app/js/json.js'></script>
     </head>
   <body>
       <div id="page-preloader">
@@ -39,14 +40,14 @@
   		<section class="shopia-section-one">
   		    <div class="shopia-section-one-contenet">
   				<nav class="shopia-section-one-content-home">
-                    <ul class="active">
+                    <ul id="ret" class="active">
   		                <a id="home" class="shopia-section-one-content-home-a" href="index.html"></a>
   					     <a id="gallery" class="shopia-section-one-content-home-a" href="index.html"></a>
   					     <a id="categories" class="shopia-section-one-content-home-a" href="index.html"></a>	
   					     <a id="pages" class="shopia-section-one-content-home-a" href="index.html"></a>
                     </ul>
   				</nav>
-                <a class="toggle-nav" href="#">&#9776;</a>
+				<a id="toggle-nav" href="#">&#9776;</a>
                 <div class="shopia-section-one-content-img_main"></div> 
                 <div class="shopia-section-one-content-content_interface">
   		            <select class="shopia-section-one-content-form_currency" name=currency>
@@ -474,7 +475,7 @@
                                 <input class="shopia-footer-content-up-shops-form-email_form" type="email" name=footer_email placeholder="Enter Your Email Address">
                                 <input class="shopia-footer-content-up-shops-form-button_subscribe" type="submit"  name="butt" value="SUBSCRIBE">
                             </form>
-                            <input class="shopia-footer-content-up-shops-form-button_pop_up" type="submit" iddiv="box_1" value="POP_UP">
+                            <input onclick="myFunctionPop_()" id="shopia-footer-content-up-shops-form-button_pop_up" type="submit" iddiv="box_1" value="POP_UP">
                             <div id="myfond_gris" opendiv="box_1" style="display:none;"></div>
                             <div id="box_1" class="mymagicoverbox_fenetre" style=" width:320px;">
                                 <div id="box_4" align="center"></div>
@@ -495,8 +496,8 @@
                                             <label id="label_message"  for="message" style="display:block; padding-top: 10px"></label>
                                             <textarea name="message" id="message" cols="35" rows="5"></textarea>
                                         </fieldset>
-                                         <div id="mymagicoverbox_pop_id" style="width:100px; margin-bottom: 10px; color:green;" align="center" class="mymagicoverbox_pop"></div>
-                                        <div style="width:100px" id="mymagicoverbox_fermer_id" align="center" class="mymagicoverbox_fermer"></div>
+                                         <div onclick="myFunctionPop2_()" id="mymagicoverbox_pop_id" style="width:100px; margin-bottom: 10px; color:green;" align="center" class="mymagicoverbox_pop"></div>
+                                        <div onclick="myFunctionPop1_()" style="width:100px" id="mymagicoverbox_fermer_id" align="center" class="mymagicoverbox_fermer"></div>
                                     </div>
                                 </div>
                             </div>             

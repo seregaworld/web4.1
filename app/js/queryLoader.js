@@ -1,5 +1,7 @@
-$(window).on('load', function () {
-var $preloader = $('#page-preloader'),
-$spinner = $preloader.find('.spinner');
-setTimeout(function(){$('#page-preloader').fadeOut('slow')},5000);
-});
+//задержка пока не загрузилась страница	 
+function ready() {
+
+	setTimeout(function(){fadeOut(document.getElementById('page-preloader'))},5000);
+}
+document.addEventListener("DOMContentLoaded", ready);
+

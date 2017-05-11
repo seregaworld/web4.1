@@ -1,4 +1,5 @@
- $(document).ready(function(){
+//загрузка текста из json
+window.onload=function(){
 	function httpGet(url) {
 		return new Promise(function(resolve, reject) {
 			var xhr = new XMLHttpRequest();
@@ -181,4 +182,4 @@
 
 
 
-});
+};

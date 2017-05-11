@@ -111,7 +111,7 @@
   font-family:'LatoRegular';
 }
 
-.shopia-footer-content-up-shops-form-button_pop_up{ 
+#shopia-footer-content-up-shops-form-button_pop_up{ 
   background-color: rgb( 50, 48, 48 );
   border:none;
   font-size: 9.5px;
@@ -126,7 +126,7 @@
   margin-right: 2px;
 }
 
-.shopia-footer-content-up-shops-form-button_pop_up{
+#shopia-footer-content-up-shops-form-button_pop_up{
     cursor:  pointer;
 }
 
@@ -273,7 +273,7 @@ ul:after {
     border-bottom:7px solid #303030;
 }
     
-.toggle-nav {
+#toggle-nav {
     padding:10px;
     position: absolute;
     top:85px;
@@ -287,7 +287,7 @@ ul:after {
     text-decoration:none;
 }
  
-.toggle-nav:hover{
+#toggle-nav:hover{
      text-decoration:none;
      color:#66a992;
 }
@@ -1992,11 +1992,11 @@ ul:after {
     border:0;
 }
     
-.toggle-nav {
+#toggle-nav {
    display: none;
 }
  
-.toggle-nav:hover{
+#toggle-nav:hover{
      display: none;
 }
 

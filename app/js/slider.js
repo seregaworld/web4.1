@@ -1,16 +1,12 @@
-(function ($) {
 var hwSlideSpeed = 700;
 var hwTimeOut = 3000;
 var hwNeedLinks = true;
 
-$(document).ready(function(e) {
-	$('.slide').css(
-		{"position" : "absolute",
-		 "top":'0', "left": '0'}).hide().eq(0).show();
+function ready_slider() {
 	var slideNum = 0;
 	var k_id=0;
 	var slideTime;
-	slideCount = $("#s .slide").size();
+	slideCount = 4;
 	var animSlide = function(arrow, id_p){
 		clearTimeout(slideTime);
 		$('.slide').eq(slideNum).fadeOut(hwSlideSpeed);
@@ -43,7 +39,6 @@ $(document).ready(function(e) {
 	}
 /* ------------------------------------------------------------*/    
 
-	var $adderSpan = '';
 	document.getElementById("shopia-section-one-content-rhomb-image1").style.backgroundPosition="-367px -65px";
 	document.getElementById("shopia-section-one-content-rhomb-image1").addEventListener('click', function(event) {
 	document.getElementById("shopia-section-one-content-rhomb-image1").style.backgroundPosition="-367px -65px";
@@ -86,5 +81,6 @@ $(document).ready(function(e) {
 		function(){pause = false; rotator();
 		});
 	rotator();
-});
-})(jQuery);
+}
+
+document.addEventListener("DOMContentLoaded", ready_slider);
