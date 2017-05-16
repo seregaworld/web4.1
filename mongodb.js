@@ -1,0 +1,12 @@
+var mongoClient = require("mongodb").MongoClient;
+ 
+var news = [{name_product: "Fitaylor 2017 New Spring O-neck Three Quarter Floral print Fashion Thin Grace Dress Woman", info:"The silhouette that emphasizes the figure, a lush or fitting skirt, slightly covering the knees and a very laconic line of the decollete - most often 'quads' or 'boat'. With or without sleeves, but the style of models emphasized the frailty and subtlety of the figure of the actress. The most famous was the black model, in which the heroine Audrey appears in the first frames of the film. But the dresses of the actress both on the screen and in life are full of pure classical colors and gentle pastel shades. The wedding dress of an actress is one of the tops of this magnificent style.", res: "Fitaylor", day:"15.05.2017"} , {name_product: "New Ultra Light Duck Down Jacket Men Feather Man Winter Double Side Reversible Parka Coats Plus Size 3XL Thin Warm Overcoat", info: "Dresses in the style of the 'Great Gatsby' - this is a magnificent reading of one of the most interesting periods in the history of fashion. Femininity, erected in the cult, is reflected in styles that show a figure with intriguing sophistication.Demonstratively simple lines of models seem so only at first glance. Straight or slightly fitted silhouettes of a length just 'for the knee', complex lines of hem and decollete create a unique silhouette - refined and very romantic. In many respects, the charm of such dresses is due to the fabrics: thin, plastic weightless silk fabrics with luxurious finishes in the form of hand embroidery with beads and bugles.", res: "F&T", day:"13.05.2017"}, {name_product: "Fashion Autumn Women Pu Leather Jacket Slim Motor Outwear Coat Zippers Roupas De Couro Femininos Plus Size 4XL Elegant Punk Coat", info: "One of the most popular destinations - dresses of business style - an indispensable attribute of successful and confident women. Lovers of shocking clothing often underestimate the elegance of such models, considering them boring and even rustic. Meanwhile, it is in them laid the best design ideas, to embody which in the strict framework of the dress code - a real art .", res: "StyleGirls",day:"14.05.2017"}];
+var url = "mongodb://localhost:27017/productShops";
+mongoClient.connect(url, function(err, db){
+     
+    db.collection("product").insertMany(news, function(err, results){
+             
+        console.log(results);
+        db.close();
+    });
+});

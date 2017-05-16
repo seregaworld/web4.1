@@ -57,69 +57,6 @@ window.onload=function(){
   			return 'f3';
 		});
 
-	httpGet("./js/shopia-section-three.json").then( function f4(result) {
-  			var data = JSON.parse(result); 
-			document.getElementById("free").innerHTML=data["free"];
-          		document.getElementById("order_min").innerHTML=data["order_min"];
-          		document.getElementById("30days").innerHTML=data["30days"];
-          		document.getElementById("money").innerHTML=data["money"];
-          		document.getElementById("support").innerHTML=data["support"];
-          		document.getElementById("lifestyme").innerHTML=data["lifestyme"];
-  			return 'f4';
-		});
-
-	httpGet("./js/shopia-section-four.json").then( function f5(result) {
-  			var data = JSON.parse(result); 
-			document.getElementById("summer").innerHTML=data["summer"];
-          		document.getElementById("handpicked").innerHTML=data["handpicked"];
-          		document.getElementById("201").innerHTML=data["201"];
-          		document.getElementById("procent1").innerHTML=data["procent1"];
-          		document.getElementById("add1").innerHTML=data["add1"];
-          		document.getElementById("202").innerHTML=data["202"];
-          		document.getElementById("procent2").innerHTML=data["procent2"];
-          		document.getElementById("add2").innerHTML=data["add2"];
-          		document.getElementById("203").innerHTML=data["203"];
-          		document.getElementById("procent3").innerHTML=data["procent3"];
-          		document.getElementById("add3").innerHTML=data["add3"];
-          		document.getElementById("204").innerHTML=data["204"];
-          		document.getElementById("procent4").innerHTML=data["procent4"];
-          		document.getElementById("add4").innerHTML=data["add4"];
-          		document.getElementById("401").innerHTML=data["401"];
-          		document.getElementById("procent5").innerHTML=data["procent5"];
-          		document.getElementById("add13").innerHTML=data["add13"];
-          		document.getElementById("402").innerHTML=data["402"];
-          		document.getElementById("procent6").innerHTML=data["procent6"];
-          		document.getElementById("add14").innerHTML=data["add14"];
-          		document.getElementById("403").innerHTML=data["403"];
-          		document.getElementById("procent7").innerHTML=data["procent7"];
-          		document.getElementById("add15").innerHTML=data["add15"];
-          		document.getElementById("404").innerHTML=data["404"];
-          		document.getElementById("procent8").innerHTML=data["procent8"];
-          		document.getElementById("add16").innerHTML=data["add16"];
-          		document.getElementById("add5").innerHTML=data["add5"];
-          		document.getElementById("add6").innerHTML=data["add6"];
-          		document.getElementById("add7").innerHTML=data["add7"];
-          		document.getElementById("add8").innerHTML=data["add8"];
-          		document.getElementById("add9").innerHTML=data["add9"];
-          		document.getElementById("add10").innerHTML=data["add10"];
-          		document.getElementById("add11").innerHTML=data["add11"];
-          		document.getElementById("add12").innerHTML=data["add12"];
-          		document.getElementById("our").innerHTML=data["our"];
-  			return 'f5';
-		});
-
-		httpGet("./js/shopia-section-five.json").then( function f6(result) {
-  			var data = JSON.parse(result); 
-			document.getElementById("says").innerHTML=data["says"];
-          		document.getElementById("sed1").innerHTML=data["sed1"];
-          		document.getElementById("sandra").innerHTML=data["sandra"];
-          		document.getElementById("fashion").innerHTML=data["fashion"];
-          		document.getElementById("sed2").innerHTML=data["sed2"];
-          		document.getElementById("sheikh").innerHTML=data["sheikh"];
-          		document.getElementById("designer").innerHTML=data["designer"];
-  			return 'f6';
-		});
-
 		httpGet("./js/shopia-footer.json").then( function f7(result) {
   			var data = JSON.parse(result); 
 			document.getElementById("shops").innerHTML=data["shops"];
@@ -172,9 +109,6 @@ window.onload=function(){
 			document.getElementById("mymagicoverbox_fermer_id").innerHTML=data["mymagicoverbox_fermer_id"];
   			return 'f7';
 		});
-
-
-
 
 
 

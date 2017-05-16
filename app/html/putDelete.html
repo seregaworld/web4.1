@@ -1,0 +1,20 @@
+<div style="color: red; display: block; font-family:'LatoRegular'; font-size: 26px" align="center">{{pd_product_title}}</div>
+<div align="center">
+    <label align="center" style="display:block; padding-top: 10px">{{pd_title_choin}}</label>
+    <input id="id_pr" ng-model="Id1" required style="display:block; width:100px; height:30px" align="center" type="text" name="name_product">
+    <div ng-click="getId1(Id1)" style="cursor: pointer; width:100px; margin-bottom: 10px; color:green;" align="center">{{get_but}}</div>
+    <div ng-click="deleteProduct(Id1)" style="cursor: pointer; width:100px; margin-bottom: 10px; color:green;" align="center">{{delete_but}}</div>
+</div>
+<div align="center">
+    <fieldset style="padding:0;">
+        <label  style="display:block; padding-top: 10px">{{pdName_product}}</label>
+        <input id="pdname" required style="display:block;" type="text" name="name_product">
+        <label style="display:block; padding-top: 10px">{{pdRes}}</label>
+        <input id="pdres" required style="display:block;" type="text" name="res">
+        <label style="display:block; padding-top: 10px">{{pdDay}}</label>
+        <input id="pdday" required style="display:block;" type="text" name="day">
+        <textarea id="pdinfo" name="messagei" cols="35" rows="5"></textarea>
+    </fieldset>
+    <div ng-click="putProduct(Id1)" id="mymagicoverbox_pop_id" style="cursor: pointer; width:100px; margin-bottom: 10px; color:green;" align="center">{{put_but}}</div>
+</div>
+<div ui-view></div>

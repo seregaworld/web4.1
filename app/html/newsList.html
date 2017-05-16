@@ -1,0 +1,8 @@
+<div style="color: red; display: block; font-family:'LatoRegular'; font-size: 26px" align="center">{{product_title}}</div>
+<table align="center" class="table table-condensed table-striped table-bordered" my-directive></table>
+<div align="center">
+    <label align="center" style="display:block; padding-top: 10px">{{title_choin}}</label>
+    <input ng-model="Id" requireds style="display:block; width:100px; height:30px" align="center" type="text" name="name_product">
+    <div ui-sref="infoList" ng-click="getId(Id)" id="mymagicoverbox_pop_id" style="cursor: pointer; width:100px; margin-bottom: 10px; color:green;" align="center">{{title_but}}</div>
+</div>
+<div ui-view></div>

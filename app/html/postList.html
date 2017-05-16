@@ -1,0 +1,15 @@
+<div style="color: red; display: block; font-family:'LatoRegular'; font-size: 26px" align="center">{{new_product_title}}</div>
+<div align="center">
+    <fieldset style="padding:0;">
+        <label  style="display:block; padding-top: 10px">{{prName_product}}</label>
+        <input id="name_pr" ng-model="name_product_a" required style="display:block;" type="text" name="name_product">
+        <label style="display:block; padding-top: 10px">{{prRes}}</label>
+        <input id="res_pr" ng-model="res_a" required style="display:block;" type="text" name="res">
+        <label style="display:block; padding-top: 10px">{{prDay}}</label>
+        <input id="day_pr" ng-model="day_a" required style="display:block;" type="text" name="day">
+        <textarea id="info_pr" ng-model="info_a" name="messagei" cols="35" rows="5"></textarea>
+    </fieldset>
+    <div ng-click="postTovar(name_product_a, res_a, day_a, info_a)" id="mymagicoverbox_pop_id" style="cursor: pointer; width:100px; margin-bottom: 10px; color:green;" align="center">{{button_ins}}</div>
+</div>
+
+<div ui-view></div>
